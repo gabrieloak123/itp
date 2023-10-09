@@ -59,7 +59,7 @@ void reprovados(int tamanho, float* vetor){
             if(primeiro){
                 primeiro = 0;
             } else{
-                printf(",");
+                printf(", ");
             }
             printf("%d (%.1f)", i+1, vetor[i]);
         }
