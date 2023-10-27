@@ -12,7 +12,7 @@ void imprime_relatorio(int fome, int sede, int banheiro, int sono, int tedio){
 
 int simula_sims(int *fome, int *sede, int *banheiro, int *sono, int *tedio){
     char acao[20];
-    scanf("%s", acao);
+    scanf(" %[^\n]", acao);
 
     if(strcmp(acao, "comer") == 0){
         *fome += 30;
@@ -58,7 +58,7 @@ int simula_sims(int *fome, int *sede, int *banheiro, int *sono, int *tedio){
 
     if(*fome <= 15){
         printf("Alerta: fome está com valor baixo\n");
-        if(*fome < 0){
+        if(*fome <= 0){
             printf("Game Over! Morreu de fome\n");
             *fome = 0;
             return 0;
@@ -66,7 +66,7 @@ int simula_sims(int *fome, int *sede, int *banheiro, int *sono, int *tedio){
     }
     if(*sede <= 15){
         printf("Alerta: sede está com valor baixo\n");
-        if(*sede < 0){
+        if(*sede <= 0){
             printf("Game Over! Morreu de sede\n");
             *sede = 0;
             return 0;
@@ -74,7 +74,7 @@ int simula_sims(int *fome, int *sede, int *banheiro, int *sono, int *tedio){
     }
     if(*sono <= 15){
         printf("Alerta: sono está com valor baixo\n");
-        if(*sono < 0){
+        if(*sono <= 0){
             printf("Game Over! Morreu dormindo\n");
             *sono = 0;
             return 0;
@@ -82,7 +82,7 @@ int simula_sims(int *fome, int *sede, int *banheiro, int *sono, int *tedio){
     }
     if(*banheiro <= 15){
         printf("Alerta: banheiro está com valor baixo\n");
-        if(*banheiro < 0){
+        if(*banheiro <= 0){
             printf("Game Over! Morreu de apertado\n");
             *banheiro = 0;
             return 0;
@@ -90,15 +90,15 @@ int simula_sims(int *fome, int *sede, int *banheiro, int *sono, int *tedio){
     }
     if(*tedio <= 15){
         printf("Alerta: tédio está com valor baixo\n");
-        if(*tedio < 0){
+        if(*tedio <= 0){
             printf("Game Over! Morreu de deprimido\n");
             *tedio = 0;
             return 0;
         }
     }
-    printf("----------------------------------------------\n");
-    imprime_relatorio(*fome, *sede, *banheiro, *sono, *tedio);
-    printf("----------------------------------------------\n");
+    //printf("----------------------------------------------\n");
+    //imprime_relatorio(*fome, *sede, *banheiro, *sono, *tedio);
+    //printf("----------------------------------------------\n");
     return 1;
 }
 
