@@ -57,44 +57,44 @@ int simula_sims(int *fome, int *sede, int *banheiro, int *sono, int *tedio){
     *tedio = (*tedio > 100) ? 100 : *tedio;
 
     if(*fome <= 15){
-        printf("Alerta: fome está com valor baixo\n");
         if(*fome <= 0){
             printf("Game Over! Morreu de fome\n");
             *fome = 0;
             return 0;
         }
+        printf("Alerta: fome está com valor baixo\n");
     }
     if(*sede <= 15){
-        printf("Alerta: sede está com valor baixo\n");
         if(*sede <= 0){
             printf("Game Over! Morreu de sede\n");
             *sede = 0;
             return 0;
         }
+        printf("Alerta: sede está com valor baixo\n");
     }
     if(*sono <= 15){
-        printf("Alerta: sono está com valor baixo\n");
         if(*sono <= 0){
             printf("Game Over! Morreu dormindo\n");
             *sono = 0;
             return 0;
         }
+        printf("Alerta: sono está com valor baixo\n");
     }
     if(*banheiro <= 15){
-        printf("Alerta: banheiro está com valor baixo\n");
         if(*banheiro <= 0){
-            printf("Game Over! Morreu de apertado\n");
+            printf("Game Over! Morreu apertado...\n");
             *banheiro = 0;
             return 0;
         }
+        printf("Alerta: banheiro está com valor baixo\n");
     }
     if(*tedio <= 15){
-        printf("Alerta: tédio está com valor baixo\n");
         if(*tedio <= 0){
             printf("Game Over! Morreu de deprimido\n");
             *tedio = 0;
             return 0;
         }
+        printf("Alerta: tédio está com valor baixo\n");
     }
     //printf("----------------------------------------------\n");
     //imprime_relatorio(*fome, *sede, *banheiro, *sono, *tedio);
@@ -104,6 +104,7 @@ int simula_sims(int *fome, int *sede, int *banheiro, int *sono, int *tedio){
 
 int main(){
     int fome, sede, banheiro, sono, tedio;
+
     int acoes;
 
     scanf("%d %d %d %d %d", &fome, &sede, &banheiro, &sono, &tedio);
